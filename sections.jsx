@@ -130,6 +130,73 @@ function SectionHead({ eyebrow, title, note }) {
 
 }
 
+function Logo() {
+  const c = window.TN_CONTENT.logo;
+  return (
+    <section className="logo-sec" id="logo">
+      <div className="wrap">
+        <Reveal className="lg-top">
+          <span className="eyebrow">{c.eyebrow}</span>
+          <img className="lg-wordmark" src="assets/logo-horizontal.png" alt="토니네 크리에이티브 스튜디오 로고" />
+          <h2 className="lg-title">{c.title.map((l, i) => <span key={i}>{l}</span>)}</h2>
+          <div className="lg-lead">{c.lead.map((p, i) => <p key={i}>{p}</p>)}</div>
+        </Reveal>
+
+        <Reveal className="lg-name" delay={60}>
+          <span className="lg-k">{c.name.k}</span>
+          <h3 className="lg-h">{c.name.h}</h3>
+          <div className="lg-body">
+            {c.name.p.map((p, i) => <p key={i}>{p}</p>)}
+            <p className="lg-strong">{c.name.strong}</p>
+            <p>{c.name.tail}</p>
+          </div>
+        </Reveal>
+
+        <div className="lg-blocks">
+          {c.blocks.map((b, i) =>
+          <Reveal className={"lg-block crop-" + b.crop} key={b.k} delay={i * 60}>
+              <div className={"lg-fig fig-" + b.crop} role="img" aria-label={"토니네 심볼 — " + b.h}></div>
+              <div className="lg-txt">
+                <span className="lg-k">{b.k}</span>
+                <h3 className="lg-h">{b.h}</h3>
+                <div className="lg-body">
+                  {b.p.map((p, j) => <p key={j}>{p}</p>)}
+                  <p className="lg-strong">{b.strong}</p>
+                  {b.tail && <p>{b.tail}</p>}
+                </div>
+              </div>
+            </Reveal>
+          )}
+        </div>
+
+        <Reveal className="lg-color" delay={60}>
+          <div className="lg-txt">
+            <span className="lg-k">{c.color.k}</span>
+            <h3 className="lg-h">{c.color.h}</h3>
+            <div className="lg-body">{c.color.p.map((p, i) => <p key={i}>{p}</p>)}</div>
+          </div>
+          <ul className="lg-swatches">
+            {c.color.swatches.map((w) =>
+            <li key={w.name}>
+                <span className="sw-chip" style={{ background: w.hex }}></span>
+                <span className="sw-meta"><b>{w.name}</b><i>{w.code}</i><em>{w.use}</em></span>
+              </li>
+            )}
+          </ul>
+        </Reveal>
+
+        <Reveal className="lg-outro" delay={60}>
+          <img className="lg-vertical" src="assets/logo-vertical.png" alt="토니네 세로형 로고" />
+          <div className="lg-outro-txt">
+            {c.outro.map((l, i) => <p key={i}>{l}</p>)}
+            <p className="lg-outro-tail">{c.outroTail}</p>
+          </div>
+        </Reveal>
+      </div>
+    </section>);
+
+}
+
 function Services() {
   const c = window.TN_CONTENT.services;
   return (

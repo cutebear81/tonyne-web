@@ -1,0 +1,202 @@
+/* 토니네 — 콘텐츠 & 무드 테마 정의
+   (실제 카피/이미지는 추후 교체. 플레이스홀더는 점선 박스로 표시) */
+
+// 무드별 섹션 색상 시퀀스: [hero, about, services, work, clients, contact]
+// 스크롤하면 JS가 활성 섹션의 색을 --bg/--fg/--accent 로 부드럽게 전환한다.
+window.TN_MOODS = {
+  mono: {
+    label: "모노크롬",
+    photo: "assets/tony-mono.jpg",
+    sections: [
+      { bg: "#0a0a0a", fg: "#f6f5f3", accent: "#f6f5f3", glow: "rgba(255,255,255,0.05)", glowO: 0.6 },
+      { bg: "#f4f3f1", fg: "#121212", accent: "#121212", glow: "transparent", glowO: 0 },
+      { bg: "#0e0e0e", fg: "#f6f5f3", accent: "#f6f5f3", glow: "rgba(255,255,255,0.04)", glowO: 0.5 },
+      { bg: "#e9e8e5", fg: "#121212", accent: "#121212", glow: "transparent", glowO: 0 },
+      { bg: "#f4f3f1", fg: "#121212", accent: "#121212", glow: "transparent", glowO: 0 },
+      { bg: "#0a0a0a", fg: "#f6f5f3", accent: "#f6f5f3", glow: "rgba(255,255,255,0.05)", glowO: 0.6 },
+    ],
+  },
+  warm: {
+    label: "웜 톤",
+    photo: "assets/tony-warm.jpg",
+    sections: [
+      { bg: "#ece1d0", fg: "#2a2420", accent: "#b85c38", glow: "rgba(184,92,56,0.12)", glowO: 1 },
+      { bg: "#e4d5bf", fg: "#2a2420", accent: "#b85c38", glow: "rgba(184,92,56,0.08)", glowO: 1 },
+      { bg: "#2a2420", fg: "#f3e9db", accent: "#e0a06f", glow: "rgba(224,160,111,0.10)", glowO: 1 },
+      { bg: "#efe6d7", fg: "#2a2420", accent: "#b85c38", glow: "rgba(184,92,56,0.07)", glowO: 1 },
+      { bg: "#e4d5bf", fg: "#2a2420", accent: "#b85c38", glow: "transparent", glowO: 0 },
+      { bg: "#b85c38", fg: "#fbf3e8", accent: "#fbf3e8", glow: "rgba(255,255,255,0.08)", glowO: 1 },
+    ],
+  },
+  vivid: {
+    label: "비비드",
+    photo: "assets/tony-vivid.jpg",
+    sections: [
+      { bg: "#2436ff", fg: "#ffffff", accent: "#ffe600", glow: "rgba(255,230,0,0.18)", glowO: 1 },
+      { bg: "#f6f5f3", fg: "#0a0a0a", accent: "#ff3b1f", glow: "transparent", glowO: 0 },
+      { bg: "#ff3b1f", fg: "#ffffff", accent: "#ffe600", glow: "rgba(255,255,255,0.10)", glowO: 1 },
+      { bg: "#0a0a0a", fg: "#ffffff", accent: "#ffe600", glow: "rgba(36,54,255,0.22)", glowO: 1 },
+      { bg: "#f6f5f3", fg: "#0a0a0a", accent: "#2436ff", glow: "transparent", glowO: 0 },
+      { bg: "#ffe600", fg: "#0a0a0a", accent: "#2436ff", glow: "rgba(36,54,255,0.10)", glowO: 1 },
+    ],
+  },
+};
+
+window.TN_TYPE = {
+  modern:  { label: "모던 산세리프", display: '"Pretendard", system-ui, sans-serif', body: '"Pretendard", system-ui, sans-serif' },
+  serif:   { label: "감성 세리프",   display: '"Nanum Myeongjo", serif',            body: '"Pretendard", system-ui, sans-serif' },
+  bold:    { label: "대담한 헤드라인", display: '"Black Han Sans", sans-serif',       body: '"Pretendard", system-ui, sans-serif' },
+};
+
+// ---------------- 콘텐츠 ----------------
+window.TN_CONTENT = {
+  brand: "토니네",
+  nav: [
+    { label: "소개", href: "#about" },
+    { label: "로고", href: "#logo" },
+    { label: "서비스", href: "#services" },
+    { label: "작업", href: "#work" },
+    { label: "고객사", href: "#clients" },
+    { label: "문의", href: "#contact" },
+  ],
+  hero: {
+    eyebrow: "TONYNE STUDIO",
+    lines: ["마음을 담아", "감각으로", "완성합니다"],
+    sub: "브랜드와 사람을 잇는 크리에이티브 스튜디오. 토니네는 당신의 이야기를 감성적으로 만들어드립니다.",
+  },
+  about: {
+    eyebrow: "ABOUT",
+    lead: ["우리는 ", "좋은 감각", "은 결국 ", "사람을 향한 마음", "에서 나온다고 믿습니다."],
+    founderTag: "대표 · 토니",
+    founderNote: "“작업의 시작과 끝에는 늘 사람이 있습니다. 토니네는 그 마음을 디자인합니다.”",
+    values: [
+      { k: "Vision", h: "감각의 기준을 만듭니다", p: "유행을 좇기보다 오래 사랑받을 결과물을 지향합니다." },
+      { k: "Craft", h: "디테일에 타협하지 않습니다", p: "보이지 않는 1px까지, 완성도가 곧 태도입니다." },
+      { k: "Partner", h: "끝까지 함께합니다", p: "프로젝트가 끝나도 관계는 이어집니다." },
+    ],
+  },
+  logo: {
+    eyebrow: "LOGO",
+    title: ["카메라 뒤에는", "사람이 있습니다"],
+    lead: [
+      "토니네의 로고에는 카메라 셔터 안에서 이쪽을 보고 있는 곰 한 마리가 있습니다.",
+      "렌즈가 보는 게 아니라, 사람이 봅니다. 이 회사의 이름과 색과 글자는 전부 그 이야기로 만들어졌습니다.",
+    ],
+    name: {
+      k: "이름",
+      h: "토니‘네’",
+      p: [
+        "대표의 닉네임은 토니입니다. 여기에 붙은 ‘네’는 ‘누구네 집’의 그 ‘네’입니다.",
+        "회사 이름을 지으면서 스튜디오도, 컴퍼니도, 랩도 붙이지 않았습니다. 대신 남의 집에 놀러 갈 때 쓰는 말을 골랐습니다.",
+      ],
+      strong: "‘토니네’는 상호가 아니라 집 이름입니다.",
+      tail: "이름 하나로 정해진 것이 있습니다. 우리는 클라이언트를 응대하는 곳이 아니라, 사람을 집에 들이는 곳입니다. 촬영도 앱도 그렇게 만듭니다.",
+    },
+    blocks: [
+      {
+        k: "셔터",
+        h: "열려야 담깁니다",
+        crop: "full",
+        p: [
+          "심볼의 바깥은 카메라 셔터입니다. 여러 장의 날이 원을 그리며 맞물려 있는, 사진의 가장 오래된 기계 장치입니다.",
+        ],
+        strong: "셔터는 닫혀 있을 때 아무것도 담지 못합니다. 열리는 그 짧은 순간에만 빛이 들어오고, 그때 들어온 것만 남습니다.",
+        tail: "토니네가 하는 일이 그렇습니다. 지나가는 순간 중에 남길 것을 고르고, 정확한 때에 여는 것.",
+      },
+      {
+        k: "곰",
+        h: "카메라 뒤의 사람",
+        crop: "bear",
+        p: [
+          "셔터 안쪽에서 이쪽을 보고 있는 곰은 대표의 페르소나입니다.",
+          "보통 로고에 카메라를 쓰면 렌즈를 그립니다. 렌즈는 정확하지만 차갑습니다. 토니네는 그 자리에 사람을 넣었습니다.",
+        ],
+        strong: "찍는 것은 장비가 아니라 사람이라는 말을, 문장 대신 그림으로 적어 둔 셈입니다.",
+      },
+      {
+        k: "노란 점",
+        h: "들어온 빛",
+        crop: "dot",
+        p: [
+          "셔터 안쪽 오른편에 작은 노란 점이 하나 있습니다.",
+          "셔터가 열린 순간 들어온 빛입니다. 심볼 전체에서 유일하게 밝은 색이고, 브랜드 전체에서도 유일한 포인트 컬러입니다.",
+        ],
+        strong: "하나만 있어서 눈에 띕니다.",
+      },
+    ],
+    color: {
+      k: "색",
+      h: "검정 대신 남색",
+      swatches: [
+        { name: "잉크 남색", code: "#091929", hex: "#091929", use: "심볼과 글자" },
+        { name: "오프화이트", code: "#F7F4EF", hex: "#F7F4EF", use: "바탕" },
+        { name: "옐로", code: "#FFC629", hex: "#FFC629", use: "유일한 포인트" },
+        { name: "크림", code: "—", hex: "#EFE0C6", use: "곰의 얼굴" },
+      ],
+      p: [
+        "로고의 어두운 색은 검정이 아니라 남색입니다. 검정은 단호하지만 차갑습니다. 남색은 어둡되 온도가 남습니다. 암실의 어둠, 렌즈 안쪽의 어둠에 가깝습니다.",
+        "바탕은 순백이 아니라 인화지 톤의 오프화이트입니다. 사진이 종이로 나오던 시절의 색입니다.",
+        "곰의 얼굴만 크림색으로 밝습니다. 어두운 화면에서 사람의 자리가 어디인지 보이게 하려고 그렇게 뒀습니다.",
+      ],
+    },
+    outro: ["셔터는 열려야 담깁니다.", "그 안에서 보고 있는 건 렌즈가 아니라 사람입니다."],
+    outroTail: "토니네 — 누구네 집 할 때 그 ‘네’.",
+  },
+  services: {
+    eyebrow: "SERVICES",
+    title: "무엇을 만드나요",
+    note: "브랜드의 첫인상부터 경험의 끝까지, 토니네가 함께합니다.",
+    items: [
+      { h: "행사 스냅 · 영상", p: "행사의 결정적인 순간을 사진과 영상으로 생생하게 기록합니다.", tags: ["현장 스냅", "행사 영상", "하이라이트"] },
+      { h: "음식 · 제품 촬영", p: "메뉴와 제품의 매력을 가장 먹음직스럽고 돋보이게 담아냅니다.", tags: ["메뉴 컷", "제품 촬영", "룩북"] },
+      { h: "SNS 콘텐츠 · 숏폼", p: "피드 사진부터 숏폼 영상까지, 브랜드의 일상을 감각적으로 전합니다.", tags: ["피드 사진", "숏폼 영상", "릴스"] },
+      { h: "앱 기획 · 개발", p: "아이디어를 기획부터 디자인, 출시까지 하나의 앱으로 완성합니다.", tags: ["앱 기획", "UI 디자인", "앱 출시"] },
+    ],
+  },
+  work: {
+    eyebrow: "SELECTED WORK",
+    title: "토니네의 작업",
+    note: "사진과 영상, 두 가지 작업을 모아 보실 수 있습니다.",
+    items: [
+      { cat: "PHOTOGRAPHY", h: "사진", p: "인물·행사·음식·제품", href: "https://tonynestudio.notion.site/de7a302b2d5d4003bc0d55612f4a87b9" },
+      { cat: "FILM", h: "영상", p: "YouTube·행사·홍보·MV", href: "https://tonynestudio.notion.site/21392ac17e1d80dc89b3ff182d634f6b" },
+    ],
+    app: {
+      cat: "APP",
+      badge: "직접 만든 앱",
+      title: "곰 시리즈",
+      lead: "기획부터 디자인, 개발, 스토어 출시까지 토니네가 직접 만든 앱 8개. 하나의 곰 캐릭터로 모았습니다. 현재 App Store에서 만나보실 수 있으며, Google Play 버전을 준비하고 있습니다.",
+      note: "iOS 출시 완료 · Android 출시 예정",
+      items: [
+        { name: "일기곰", icon: "assets/app-ilgi.png", tagline: "하루 한 줄, 10년의 오늘", one: "오늘을 쓰면 지난 10년의 같은 날이 나란히 펼쳐지는 10년 다이어리", cat: "라이프스타일", date: "2026.07.29", href: "https://apps.apple.com/kr/app/id6795751831" },
+        { name: "기프티곰", icon: "assets/app-gifti.png", tagline: "만료일을 대신 기억해 드립니다", one: "받은 기프티콘과 쿠폰을 모아 만료 전에 알려주는 보관함", cat: "라이프스타일", date: "2026.05.28", href: "https://apps.apple.com/kr/app/id6759033750" },
+        { name: "금고곰", icon: "assets/app-geumgo.png", tagline: "매번 찾던 그 번호들, 잠금 뒤에", one: "카드·계좌·통관부호·와이파이를 암호화해 보관하고 탭 한 번으로 복사", cat: "유틸리티", date: "2026.09.01", href: "https://apps.apple.com/kr/app/id6806052454" },
+        { name: "토닥곰", icon: "assets/app-todak.png", tagline: "애플워치가 읽은 오늘의 컨디션", one: "심박변이도를 내 평소와 비교해 스트레스와 회복도를 알려주는 앱", cat: "건강 및 피트니스", date: "2026.08.13", disclaimer: "웰니스 참고용이며 의료 진단이 아닙니다", href: "https://apps.apple.com/kr/app/id6800136326" },
+        { name: "홀짝곰", icon: "assets/app-holjak.png", tagline: "한 모금의 기록이 쌓여 취향이 됩니다", one: "술과 차의 테이스팅 노트를 쓰고 내 취향을 분석해 주는 앱", cat: "라이프스타일", date: "2026.06.18", href: "https://apps.apple.com/kr/app/id6781584183" },
+        { name: "리뷰곰", icon: "assets/app-review.png", tagline: "찍고, 말하면, 리뷰가 됩니다", one: "사진에 음성 메모를 붙여 리뷰 초안까지 만들어 주는 리뷰 메모장", cat: "생산성", date: "2026.06.16", href: "https://apps.apple.com/kr/app/id6780600864" },
+        { name: "캡쳐곰", icon: "assets/app-capture.png", tagline: "잘린 스크린샷을 한 장으로", one: "여러 장으로 나뉜 스크린샷을 자연스럽게 이어붙이는 앱", cat: "생산성", date: "2026.06.09", href: "https://apps.apple.com/kr/app/id6778279435" },
+        { name: "인스타곰", icon: "assets/app-insta.png", tagline: "탭 한 번으로 복사하는 꾸미기 도구", one: "특수문자·이모지·폰트를 골라 어디에나 붙여넣는 텍스트 꾸미기 앱", cat: "유틸리티", date: "2026.07.02", href: "https://apps.apple.com/kr/app/id6785532517" },
+      ],
+    },
+  },
+  clients: {
+    eyebrow: "CLIENTS & PARTNERS",
+    title: "함께한 사람들",
+    note: "F&B부터 브랜드·미디어까지, 다양한 분야의 파트너와 호흡을 맞춰왔습니다.",
+    groups: [
+      { cat: "F&B", items: ["고메정식당", "시그니처랩", "우후루화", "몬도델비노 코리아", "금양인터내셔널", "카페츠키", "원조홍두깨손칼국수", "아콜레이드 와인", "르꼬숑"] },
+      { cat: "브랜드", items: ["송화강주", "오늘와인한잔"] },
+      { cat: "미디어", items: ["WINEBM", "와인21닷컴"] },
+      { cat: "클라이언트", items: ["블루리본 서베이", "메디트리파운더스", "한국전통음식연구소", "유니크우드", "유니크트리", "에이블컴퍼니"] },
+    ],
+  },
+  contact: {
+    eyebrow: "CONTACT",
+    big: ["함께 만들", "준비가", "되셨나요?"],
+    items: [
+      { label: "프로젝트 문의", value: "help@tonyne.kr", href: "mailto:help@tonyne.kr" },
+      { label: "전화", value: "010-2630-0420", href: "tel:01026300420" },
+    ],
+    foot: "토니네",
+  },
+};

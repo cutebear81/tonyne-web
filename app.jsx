@@ -150,6 +150,7 @@ function App() {
 
       <Hero />
       <About photo={mood.photo} />
+      <Logo />
       <Services />
       <Work />
       <Clients />
