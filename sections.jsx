@@ -174,8 +174,61 @@ function Work() {
             </a>
           )}
         </div>
+        <AppFeature />
       </div>
     </section>);
+
+}
+
+function AppFeature() {
+  const a = window.TN_CONTENT.work.app;
+  return (
+    <div className="app-feature">
+      <Reveal className="af-head">
+        <span className="af-cat">{a.cat}</span>
+        <span className="af-badge">{a.badge}</span>
+      </Reveal>
+      <Reveal className="af-intro" delay={60}>
+        <h3 className="af-title">{a.title}</h3>
+        <p className="af-lead">{a.lead}</p>
+        <div className="af-stores">
+          <span className="af-store"><StoreMark k="ios" /><span className="af-st-txt"><b>App Store</b><i>8개 앱 출시 완료</i></span></span>
+          <span className="af-store is-soon" aria-disabled="true"><StoreMark k="android" /><span className="af-st-txt"><b>Google Play</b><i>출시 예정</i></span></span>
+        </div>
+      </Reveal>
+      <div className="af-apps">
+        {a.items.map((it, i) =>
+        <a className="reveal app-card" key={it.name} href={it.href} target="_blank" rel="noopener noreferrer" style={{ "--d": i * 70 + "ms" }}>
+            <img className="ac-icon" src={it.icon} alt={it.name + " 앱 아이콘"} loading="lazy" />
+            <div className="ac-body">
+              <div className="ac-top">
+                <h4>{it.name}</h4>
+                <span className="ac-arr" aria-hidden="true">↗</span>
+              </div>
+              <p className="ac-tag">{it.tagline}</p>
+              <p className="ac-one">{it.one}</p>
+              <div className="ac-meta"><span>{it.cat}</span><span className="ac-dot">·</span><span>{it.date}</span></div>
+              {it.disclaimer && <p className="ac-note">{it.disclaimer}</p>}
+            </div>
+          </a>
+        )}
+      </div>
+    </div>);
+
+}
+
+function StoreMark({ k }) {
+  if (k === "ios") {
+    return (
+      <svg className="af-st-ico" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.9-3.6 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.7.7 1.1 0 1.9-1.1 2.6-2.1.5-.8.9-1.6 1.1-2.1-2.1-.8-2.7-2.9-2.7-3.8zM14.3 5.8c.6-.7 1-1.7.9-2.7-.9.1-2 .6-2.6 1.3-.6.6-1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z" />
+      </svg>);
+
+  }
+  return (
+    <svg className="af-st-ico" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M4 3.2c-.3.3-.5.7-.5 1.3v15c0 .6.2 1 .5 1.3l8.1-7.9L4 3.2zm9.2 6.9l2.6-2.6-8.3-4.7c-.3-.2-.6-.2-.9-.1l6.6 7.4zm0 3.8l-6.6 7.4c.3.1.6.1.9-.1l8.3-4.7-2.6-2.6zm5.6-3.1l-2.1-1.2-2.8 2.8 2.8 2.8 2.1-1.2c.8-.5.8-1.9 0-2.4z" />
+    </svg>);
 
 }
 

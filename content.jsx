@@ -82,6 +82,7 @@ window.TN_CONTENT = {
       { h: "행사 스냅 · 영상", p: "행사의 결정적인 순간을 사진과 영상으로 생생하게 기록합니다.", tags: ["현장 스냅", "행사 영상", "하이라이트"] },
       { h: "음식 · 제품 촬영", p: "메뉴와 제품의 매력을 가장 먹음직스럽고 돋보이게 담아냅니다.", tags: ["메뉴 컷", "제품 촬영", "룩북"] },
       { h: "SNS 콘텐츠 · 숏폼", p: "피드 사진부터 숏폼 영상까지, 브랜드의 일상을 감각적으로 전합니다.", tags: ["피드 사진", "숏폼 영상", "릴스"] },
+      { h: "앱 기획 · 개발", p: "아이디어를 기획부터 디자인, 출시까지 하나의 앱으로 완성합니다.", tags: ["앱 기획", "UI 디자인", "앱 출시"] },
     ],
   },
   work: {
@@ -92,6 +93,23 @@ window.TN_CONTENT = {
       { cat: "PHOTOGRAPHY", h: "사진", p: "인물·행사·음식·제품", href: "https://tonynestudio.notion.site/de7a302b2d5d4003bc0d55612f4a87b9" },
       { cat: "FILM", h: "영상", p: "YouTube·행사·홍보·MV", href: "https://tonynestudio.notion.site/21392ac17e1d80dc89b3ff182d634f6b" },
     ],
+    app: {
+      cat: "APP",
+      badge: "직접 만든 앱",
+      title: "곰 시리즈",
+      lead: "기획부터 디자인, 개발, 스토어 출시까지 토니네가 직접 만든 앱 8개. 하나의 곰 캐릭터로 모았습니다. 현재 App Store에서 만나보실 수 있으며, Google Play 버전을 준비하고 있습니다.",
+      note: "iOS 출시 완료 · Android 출시 예정",
+      items: [
+        { name: "일기곰", icon: "assets/app-ilgi.png", tagline: "하루 한 줄, 10년의 오늘", one: "오늘을 쓰면 지난 10년의 같은 날이 나란히 펼쳐지는 10년 다이어리", cat: "라이프스타일", date: "2026.07.29", href: "https://apps.apple.com/kr/app/id6795751831" },
+        { name: "기프티곰", icon: "assets/app-gifti.png", tagline: "만료일을 대신 기억해 드립니다", one: "받은 기프티콘과 쿠폰을 모아 만료 전에 알려주는 보관함", cat: "라이프스타일", date: "2026.05.28", href: "https://apps.apple.com/kr/app/id6759033750" },
+        { name: "금고곰", icon: "assets/app-geumgo.png", tagline: "매번 찾던 그 번호들, 잠금 뒤에", one: "카드·계좌·통관부호·와이파이를 암호화해 보관하고 탭 한 번으로 복사", cat: "유틸리티", date: "2026.09.01", href: "https://apps.apple.com/kr/app/id6806052454" },
+        { name: "토닥곰", icon: "assets/app-todak.png", tagline: "애플워치가 읽은 오늘의 컨디션", one: "심박변이도를 내 평소와 비교해 스트레스와 회복도를 알려주는 앱", cat: "건강 및 피트니스", date: "2026.08.13", disclaimer: "웰니스 참고용이며 의료 진단이 아닙니다", href: "https://apps.apple.com/kr/app/id6800136326" },
+        { name: "홀짝곰", icon: "assets/app-holjak.png", tagline: "한 모금의 기록이 쌓여 취향이 됩니다", one: "술과 차의 테이스팅 노트를 쓰고 내 취향을 분석해 주는 앱", cat: "라이프스타일", date: "2026.06.18", href: "https://apps.apple.com/kr/app/id6781584183" },
+        { name: "리뷰곰", icon: "assets/app-review.png", tagline: "찍고, 말하면, 리뷰가 됩니다", one: "사진에 음성 메모를 붙여 리뷰 초안까지 만들어 주는 리뷰 메모장", cat: "생산성", date: "2026.06.16", href: "https://apps.apple.com/kr/app/id6780600864" },
+        { name: "캡쳐곰", icon: "assets/app-capture.png", tagline: "잘린 스크린샷을 한 장으로", one: "여러 장으로 나뉜 스크린샷을 자연스럽게 이어붙이는 앱", cat: "생산성", date: "2026.06.09", href: "https://apps.apple.com/kr/app/id6778279435" },
+        { name: "인스타곰", icon: "assets/app-insta.png", tagline: "탭 한 번으로 복사하는 꾸미기 도구", one: "특수문자·이모지·폰트를 골라 어디에나 붙여넣는 텍스트 꾸미기 앱", cat: "유틸리티", date: "2026.07.02", href: "https://apps.apple.com/kr/app/id6785532517" },
+      ],
+    },
   },
   clients: {
     eyebrow: "CLIENTS & PARTNERS",
@@ -108,7 +126,7 @@ window.TN_CONTENT = {
     eyebrow: "CONTACT",
     big: ["함께 만들", "준비가", "되셨나요?"],
     items: [
-      { label: "프로젝트 문의", value: "tonyneplanning@gmail.com", href: "mailto:tonyneplanning@gmail.com" },
+      { label: "프로젝트 문의", value: "help@tonyne.kr", href: "mailto:help@tonyne.kr" },
       { label: "전화", value: "010-2630-0420", href: "tel:01026300420" },
     ],
     foot: "토니네",

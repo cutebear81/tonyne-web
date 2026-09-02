@@ -467,6 +467,38 @@ body[data-mood="vivid"] .hero .ghostword { opacity: 0.1; }
 }
 .work-tile:hover .wt-link, .work-tile:focus-visible .wt-link { opacity: 1; transform: none; }
 
+/* ---------- APP: 자체 개발 앱 소개 ---------- */
+.app-feature { margin-top: clamp(28px, 3.4vw, 44px); border-top: 1px solid var(--hair); padding-top: clamp(30px, 3.6vw, 52px); }
+.af-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: clamp(16px, 2vw, 22px); }
+.af-cat { font-size: 0.78rem; letter-spacing: 0.24em; font-weight: 600; }
+.af-badge { font-size: 0.76rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 100px; padding: 5px 12px; }
+.af-intro { display: flex; flex-direction: column; gap: 16px; margin-bottom: clamp(26px, 3.2vw, 44px); }
+.af-title { font-size: clamp(1.8rem, 3.4vw, 2.8rem); letter-spacing: -0.035em; line-height: 1.04; }
+.af-lead { color: var(--muted); max-width: 56ch; font-size: 1.02rem; line-height: 1.65; text-wrap: pretty; }
+.af-stores { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 2px; }
+.af-store { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid var(--hair); border-radius: 12px; color: var(--fg); }
+.af-store.is-soon { opacity: 0.45; }
+.af-st-ico { flex: none; }
+.af-st-txt { display: flex; flex-direction: column; line-height: 1.2; }
+.af-st-txt b { font-size: 0.94rem; font-weight: 600; letter-spacing: -0.01em; }
+.af-st-txt i { font-style: normal; font-size: 0.74rem; opacity: 0.62; margin-top: 2px; }
+.af-apps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.4vw, 20px); }
+.app-card { display: flex; gap: clamp(14px, 1.6vw, 20px); align-items: flex-start; padding: clamp(18px, 2vw, 26px); border: 1px solid var(--hair); border-radius: 18px; text-decoration: none; color: var(--fg); transition: border-color 0.5s var(--ease), transform 0.5s var(--ease), background 0.5s var(--ease); }
+.app-card:hover { border-color: color-mix(in srgb, var(--fg) 42%, transparent); transform: translateY(-3px); background: color-mix(in srgb, var(--fg) 3%, transparent); }
+.ac-icon { width: clamp(56px, 5.6vw, 74px); aspect-ratio: 1; border-radius: 23%; flex: none; display: block; object-fit: cover; }
+.ac-body { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.ac-top { display: flex; align-items: baseline; gap: 10px; }
+.ac-top h4 { font-size: clamp(1.1rem, 1.5vw, 1.35rem); letter-spacing: -0.02em; font-weight: 600; }
+.ac-arr { font-size: 0.82rem; opacity: 0.4; transition: transform 0.4s var(--ease), opacity 0.4s var(--ease); }
+.app-card:hover .ac-arr { transform: translate(3px, -3px); opacity: 1; }
+.ac-tag { font-size: 0.95rem; letter-spacing: -0.01em; }
+.ac-one { font-size: 0.88rem; color: var(--muted); line-height: 1.55; text-wrap: pretty; }
+.ac-meta { display: flex; gap: 7px; font-size: 0.74rem; color: var(--muted); opacity: 0.8; margin-top: 4px; letter-spacing: 0.02em; }
+.ac-dot { opacity: 0.5; }
+.ac-note { font-size: 0.76rem; color: color-mix(in srgb, var(--fg) 66%, transparent); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--hair); line-height: 1.45; }
+@media (max-width: 860px) { .af-apps { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .app-card { flex-direction: column; } }
+
 /* =========================================================
    CLIENTS  (카테고리만 먼저 보이고 hover/클릭 시 펼침)
    ========================================================= */
